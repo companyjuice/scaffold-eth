@@ -9,7 +9,7 @@ contract YourContract {
 
   // event SetPurpose(address sender, string purpose);
 
-  string public purpose = "Learning Garden.University + Building dApps !!";
+  string public purpose = "Learning Garden.University + Building dApps -||-";
 
   constructor() payable {
     // what should we do on deploy?
