@@ -25,8 +25,10 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 
 //
 // Select the network you want to deploy to here:
-//
-const defaultNetwork = "localhost";
+// 
+// const defaultNetwork = "localhost";
+const defaultNetwork = "ropsten";
+// const defaultNetwork = "mainnet";
 
 const mainnetGwei = 21;
 
@@ -326,7 +328,8 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
+    // apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
+    apiKey: "D3XABZ6X45RPD3UWJ1HSVYFI1HPRE72SGJ",
   },
 };
 
