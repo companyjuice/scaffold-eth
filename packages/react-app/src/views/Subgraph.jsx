@@ -177,7 +177,7 @@ function Subgraph(props) {
           <Typography>{loading ? "Loading..." : deployWarning}</Typography>
         )}
 
-        <div style={{ margin: 32, height: 400, border: "1px solid #888888", textAlign: "left" }}>
+        <div style={{ margin: 32, height: 800, border: "1px solid #888888", textAlign: "left" }}>
           <GraphiQL fetcher={graphQLFetcher} docExplorerOpen query={EXAMPLE_GRAPHQL} />
         </div>
       </div>

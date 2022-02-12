@@ -65,7 +65,8 @@ export default function ExampleUI({
         <Divider />
         ENS Address Example:
         <Address
-          address="0x34aA3F359A9D614239015126635CE7732c18fDF3" /* this will show as austingriffith.eth */
+          //address="0x34aA3F359A9D614239015126635CE7732c18fDF3" /* this will show as austingriffith.eth */
+          address="0x8E8A8DCeE0f8887A9f9cb2E8258Ac13B06CE3E0F" /* this will show as gardenuniversity.eth */
           ensProvider={mainnetProvider}
           fontSize={16}
         />

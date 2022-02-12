@@ -60,7 +60,7 @@ const initialNetwork = NETWORKS.ropsten;
 const DEBUG = true;
 const NETWORKCHECK = true;
 const USE_BURNER_WALLET = true; // toggle burner wallet feature
-const USE_NETWORK_SELECTOR = false;
+const USE_NETWORK_SELECTOR = true;
 
 const web3Modal = Web3ModalSetup();
 
@@ -164,16 +164,19 @@ function App(props) {
 
   // Then read your DAI balance like:
   const myMainnetDAIBalance = useContractReader(mainnetContracts, "DAI", "balanceOf", [
-    "0x34aA3F359A9D614239015126635CE7732c18fDF3",
+    //"0x34aA3F359A9D614239015126635CE7732c18fDF3", /* austingriffith.eth */
+    "0x8E8A8DCeE0f8887A9f9cb2E8258Ac13B06CE3E0F", /* gardenuniversity.eth */
   ]);
 
   // keep track of a variable from the contract in the local React state:
   const purpose = useContractReader(readContracts, "YourContract", "purpose");
 
-  /*
-  const addressFromENS = useResolveName(mainnetProvider, "austingriffith.eth");
-  console.log("🏷 Resolved austingriffith.eth as:",addressFromENS)
-  */
+  /* */
+  // const addressFromENS = useResolveName(mainnetProvider, "austingriffith.eth");
+  // console.log("🏷 Resolved austingriffith.eth as:",addressFromENS)
+  // const addressFromENS = useResolveName(mainnetProvider, "gardenuniversity.eth");
+  // console.log("🏷 Resolved gardenuniversity.eth as:", addressFromENS)
+  
 
   //
   // 🧫 DEBUG 👨🏻‍🔬
@@ -323,7 +326,7 @@ function App(props) {
           />
         </Route>
         <Route path="/mainnetdai">
-          <Contract
+          {/* <Contract
             name="DAI"
             customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.DAI}
             signer={userSigner}
@@ -332,17 +335,17 @@ function App(props) {
             blockExplorer="https://etherscan.io/"
             contractConfig={contractConfig}
             chainId={1}
+          /> */}
+          {/* */}
+          <Contract
+            name="UNI"
+            customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.UNI}
+            signer={userSigner}
+            provider={mainnetProvider}
+            address={address}
+            blockExplorer="https://etherscan.io/"
           />
-          {/*
-            <Contract
-              name="UNI"
-              customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.UNI}
-              signer={userSigner}
-              provider={mainnetProvider}
-              address={address}
-              blockExplorer="https://etherscan.io/"
-            />
-            */}
+            
         </Route>
         <Route path="/subgraph">
           <Subgraph
