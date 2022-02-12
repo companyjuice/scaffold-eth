@@ -325,7 +325,7 @@ function App(props) {
           />
         </Route>
         <Route path="/mainnetdai">
-          {/* <Contract
+          <Contract
             name="DAI"
             customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.DAI}
             signer={userSigner}
@@ -334,8 +334,7 @@ function App(props) {
             blockExplorer="https://etherscan.io/"
             contractConfig={contractConfig}
             chainId={1}
-          /> */}
-          {/* */}
+          />
           <Contract
             name="UNI"
             customContract={mainnetContracts && mainnetContracts.contracts && mainnetContracts.contracts.UNI}
@@ -343,6 +342,8 @@ function App(props) {
             provider={mainnetProvider}
             address={address}
             blockExplorer="https://etherscan.io/"
+            contractConfig={contractConfig}
+            chainId={1}
           />
             
         </Route>
