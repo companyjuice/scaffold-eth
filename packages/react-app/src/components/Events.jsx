@@ -1,6 +1,7 @@
 import { List } from "antd";
 import { useEventListener } from "eth-hooks/events/useEventListener";
-import { Address } from "../components";
+// import { Address } from "../components";
+import { Address } from "./Address";
 
 /*
   ~ What it does? ~
